@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.redciudadana.congreso_abierto.SplashActivity">
+    
+    <ImageView
+        android:id="@+id/imgsplash1"
+        android:contentDescription="@string/imgdesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        android:src="@drawable/lauch_img1" />
+    
+    <ImageView
+        android:id="@+id/imgsplash2"
+        android:contentDescription="@string/imgdesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/lauch_img2" />
+    
+    <ImageView
+        android:id="@+id/imgsplash3"
+        android:contentDescription="@string/imgdesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/lauch_img3" />
+    
+    <ImageView
+        android:id="@+id/imgsplash4"
+        android:contentDescription="@string/imgdesc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/lauch_img4" />
+    
+</RelativeLayout>

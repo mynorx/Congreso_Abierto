@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Congreso Abierto</string>
+    <string name="action_settings">Settings</string>
+    <string name="imgdesc">Congreso Abierto</string>
+    <string name="title_activity_contenedor">ContenedorActivity</string>
+    <string name="opcion1">Noticias</string>
+    <string name="opcion2">Diputados</string>
+    <string name="opcion3">Comisiones</string>
+    <string name="opcion4">Foro del congreso</string>
+    <string name="opcion5">Twitter Feed</string>
+    <string name="opcion6">Contáctanos</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="banner">¿Quíen es mi representante?</string>
+
+</resources>
