@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal" >
+    
+    <ImageView 
+        android:id="@+id/imgInicioDiputados"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/banner"
+        android:src="@drawable/diputados"/>
+    
+    <ImageView 
+        android:id="@+id/imgInicioComisiones"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="40dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgInicioDiputados"
+        android:contentDescription="@string/banner"        
+        android:src="@drawable/comisiones"/>
+    
+    <ImageView 
+        android:id="@+id/imgInicioTuVoz"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/imgInicioDiputados"
+        android:contentDescription="@string/banner"        
+        android:src="@drawable/tu_voz_cuenta"/>
+    
+    <ImageView 
+        android:id="@+id/imgInicioContacto"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/imgInicioComisiones"
+        android:layout_toRightOf="@+id/imgInicioTuVoz"
+        android:contentDescription="@string/banner"        
+        android:src="@drawable/contacto"/>
+    
+</RelativeLayout>

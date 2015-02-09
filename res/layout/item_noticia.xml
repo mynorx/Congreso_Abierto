@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <ImageView
+        android:id="@+id/imgFotoNoticia"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/imgdesc"/>
+
+    <TextView
+        android:id="@+id/txtFechaNoticia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgFotoNoticia"
+        android:textColor="#00B0F6"
+        android:layout_marginLeft="15dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtDescripcionNoticia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFechaNoticia"
+        android:layout_toRightOf="@+id/imgFotoNoticia"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="" />
+    
+    <TextView 
+        android:id="@+id/txtTituloNoticia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDescripcionNoticia"
+        android:layout_toRightOf="@+id/imgFotoNoticia"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:text=""/>
+    
+    <TextView
+        android:id="@+id/txtLinkNoticia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtTituloNoticia"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/txtLinkNoticia"
+        android:textColor="#00B0F6" />
+    
+</RelativeLayout>

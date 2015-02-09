@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <ImageView 
+        android:id="@+id/imgFotoLista"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/imgdesc"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/txtNombreLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgFotoLista"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#00B0F6"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView 
+        android:id="@+id/txtTwitterLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgFotoLista"
+        android:layout_below="@+id/txtNombreLista"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="#414A4C"/>
+
+    <Button
+        android:id="@+id/btn_Perfil"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/txtTwitterLista"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/imgFotoLista"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bordes"
+        android:text="@string/ver_perfil" />
+    
+</RelativeLayout>

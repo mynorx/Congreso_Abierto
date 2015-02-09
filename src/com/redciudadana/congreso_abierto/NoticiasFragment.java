@@ -8,11 +8,18 @@ import android.view.ViewGroup;
 
 public class NoticiasFragment extends Fragment {
 	
+	
+	private View fragment = null;
+
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) 
 	{
-		return inflater.inflate(R.layout.noticias_fragment, container, false);
+		fragment = inflater.inflate(R.layout.noticias_fragment, container, false);
+        
+		return fragment;
 		
 	}
-
+	
+	
 }

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp" >
+    
+        <ImageView
+            android:id="@+id/imgFotoDiputadoPerfil"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/imgdesc"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txtNombreDiputado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imgFotoDiputadoPerfil"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView 
+            android:id="@+id/txtDistritoDiputado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00B0F6"
+            android:layout_below="@+id/txtNombreDiputado"
+            android:layout_toRightOf="@+id/imgFotoDiputadoPerfil"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text=""/>
+        
+        <ImageView
+            android:id="@+id/imgLinea"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:background="#00B0F6"
+            android:layout_below="@+id/txtNombreDiputado"
+            android:layout_toRightOf="@+id/txtDistritoDiputado"
+            android:contentDescription="@string/imgdesc"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"/>
+        
+        <TextView 
+            android:id="@+id/txtPartidoDiputado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00B0F6"
+            android:layout_below="@+id/txtNombreDiputado"
+            android:layout_toRightOf="@+id/imgLinea"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text=""/>
+        
+        <TextView
+            android:id="@+id/txtPerfil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imgFotoDiputadoPerfil"
+            android:text="@string/txtperfil1"
+            android:textColor="#5FBCD3"
+            android:layout_marginTop="15dp" />
+        
+        <TextView
+            android:id="@+id/txtPerfil2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtPerfil1"
+            android:text="@string/txtperfil2"
+            android:textColor="#5FBCD3" />
+        
+        <Button 
+            android:id="@+id/btnLlamarDiputado"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtPerfil2"
+            android:background="@drawable/llamar"
+            android:layout_marginTop="10dp"/>
+        
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@+id/btnCorreoDiputado"
+            android:layout_alignTop="@+id/txtPerfil1"
+            android:background="@drawable/fb" />
+
+        <Button
+            android:id="@+id/btnTwitter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/btnFacebook"
+            android:layout_alignBottom="@+id/btnFacebook"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnFacebook"
+            android:background="@drawable/tw" />
+        
+        <Button
+            android:id="@+id/btnYoutube"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/btnTwitter"
+            android:layout_alignBottom="@+id/btnTwitter"
+            android:layout_toLeftOf="@+id/btnTwitter"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/yt" />
+        
+        <Button
+            android:id="@+id/btnCorreoDiputado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnLlamarDiputado"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bordes2"
+            android:text="@string/txtperfilCorreo"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/btnVotosDiputado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnCorreoDiputado"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bordes2"
+            android:text="@string/txtperfilVoto"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/btnComisionesDiputado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnVotosDiputado"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bordes2"
+            android:text="@string/txtperfilComision"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/btnAsistanciaDiputado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnComisionesDiputado"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bordes2"
+            android:text="@string/txtperfilAsistencia"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        
+	</RelativeLayout>
+</ScrollView>

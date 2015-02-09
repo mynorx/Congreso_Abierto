@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+	    android:paddingTop="10dp"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/txtNombreComision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:id="@+id/txtTituloDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtNombreComision"
+            android:layout_marginTop="10dp"
+            android:textColor="#00B0F6"
+            android:text="@string/txtTituloComision"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:id="@+id/txtDescripcionComision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="#00B0F6"
+            android:layout_below="@+id/txtTituloDescripcion"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+        
+        <TextView
+            android:id="@+id/txtTituloDireccionComision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtDescripcionComision"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="@string/txtDirComisionTitulo" />
+        
+        <TextView
+            android:id="@+id/txtDireccionComision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtTituloDireccionComision"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="" />
+        
+        <TextView
+            android:id="@+id/txtTituloTelefonoComision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtDireccionComision"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="@string/txtTelComisionTitulo" />
+        
+        <TextView
+            android:id="@+id/txtTelefonoComision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtTituloTelefonoComision"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="" />
+                
+        <TextView
+            android:id="@+id/txtMiembroComisionTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtTelefonoComision"
+            android:gravity="center"
+            style="@style/estilo_listview_1"
+            android:textColor="#00B0F6"
+            android:layout_marginTop="15dp"
+            android:text="@string/txtMiembrosTitulo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <ListView 
+            android:id="@+id/listMiembrosComision"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtMiembroComisionTitulo"
+            android:layout_alignParentLeft="true">
+        </ListView>
+        
+    </RelativeLayout>    
+    
+
+

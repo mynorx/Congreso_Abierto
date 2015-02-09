@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="15dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtTuVoz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bordes"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/TuVoz"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    
+   <EditText
+       android:id="@+id/txtPregunta1"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/txtTuVoz"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/drawable_textview"
+       android:ems="10"
+       android:hint="@string/pregunta1"
+       android:inputType="textMultiLine" >
+
+         <requestFocus />
+    </EditText>
+    
+   <EditText
+       android:id="@+id/txtPregunta2"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/txtPregunta1"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/drawable_textview"
+       android:ems="10"
+       android:hint="@string/pregunta2"
+       android:inputType="textMultiLine" >
+
+    </EditText>
+    
+    <EditText
+        android:id="@+id/txtPregunta3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtPregunta2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/drawable_textview"
+        android:ems="10"
+        android:hint="@string/Pregunta3"
+        android:inputType="textMultiLine" >
+
+    </EditText>
+     <Button
+         android:id="@+id/btnEnviarTuVoz"
+         android:layout_width="80dp"
+         android:layout_height="30dp"
+         android:layout_below="@+id/txtPregunta3"
+         android:layout_alignParentRight="true"
+         android:layout_marginBottom="15dp"
+         android:layout_marginTop="10dp"
+         android:textSize="14sp"
+         android:background="@drawable/bordes"
+         android:textColor="#FFFFFF"
+         android:text="@string/enviar" />
+</RelativeLayout>
+    
+    
+</ScrollView>

@@ -1078,17 +1078,46 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int banner=0x7f020057;
-        public static final int drawer_shadow=0x7f020058;
-        public static final int ic_drawer=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int lauch_img1=0x7f02005b;
-        public static final int lauch_img2=0x7f02005c;
-        public static final int lauch_img3=0x7f02005d;
-        public static final int lauch_img4=0x7f02005e;
-        public static final int shape_list=0x7f02005f;
+        public static final int banner_h=0x7f020057;
+        public static final int banner_v=0x7f020058;
+        public static final int barra=0x7f020059;
+        public static final int bordes=0x7f02005a;
+        public static final int bordes2=0x7f02005b;
+        public static final int btn_enviar=0x7f02005c;
+        public static final int burbujas=0x7f02005d;
+        public static final int comisiones=0x7f02005e;
+        public static final int contacto=0x7f02005f;
+        public static final int diputados=0x7f020060;
+        public static final int drawable_textview=0x7f020061;
+        public static final int drawer_shadow=0x7f020062;
+        public static final int enviar=0x7f020063;
+        public static final int enviar_select=0x7f020064;
+        public static final int error_detail=0x7f020065;
+        public static final int fb=0x7f020066;
+        public static final int franjas=0x7f020067;
+        public static final int hoja=0x7f020068;
+        public static final int ic_drawer=0x7f020069;
+        public static final int ic_launcher=0x7f02006a;
+        public static final int lauch_img1=0x7f02006b;
+        public static final int lauch_img2=0x7f02006c;
+        public static final int lauch_img3=0x7f02006d;
+        public static final int lauch_img4=0x7f02006e;
+        public static final int llamar=0x7f02006f;
+        public static final int mapa=0x7f020070;
+        public static final int personas=0x7f020071;
+        public static final int rc_logo=0x7f020072;
+        public static final int select=0x7f020073;
+        public static final int shape_list=0x7f020074;
+        public static final int sobre=0x7f020075;
+        public static final int tu_voz_cuenta=0x7f020076;
+        public static final int tw=0x7f020077;
+        public static final int txt_select=0x7f020078;
+        public static final int yt=0x7f020079;
     }
     public static final class id {
+        public static final int FragmentBienvenida=0x7f05003f;
+        public static final int FragmentDistritos=0x7f050040;
+        public static final int FragmentRepresentante=0x7f050041;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1097,48 +1126,74 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f050023;
         public static final int action_bar_title=0x7f050022;
         public static final int action_context_bar=0x7f05001d;
-        public static final int action_example=0x7f05004b;
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05004c;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
+        public static final int banner1Texto1=0x7f050048;
+        public static final int banner1Texto2=0x7f050049;
+        public static final int banner2Imagen1=0x7f05004b;
+        public static final int banner2Text2=0x7f05004c;
+        public static final int banner2Texto1=0x7f05004a;
+        public static final int banner3Texto1=0x7f05004d;
+        public static final int banner3imagen1=0x7f05004e;
         public static final int beginning=0x7f050011;
+        public static final int btnAsistanciaDiputado=0x7f05007e;
+        public static final int btnComisionesDiputado=0x7f05007d;
+        public static final int btnCorreoDiputado=0x7f050079;
+        public static final int btnEnviar=0x7f050053;
+        public static final int btnEnviarTuVoz=0x7f050084;
+        public static final int btnFacebook=0x7f050078;
+        public static final int btnLlamarDiputado=0x7f050077;
+        public static final int btnTwitter=0x7f05007a;
+        public static final int btnVotosDiputado=0x7f05007c;
+        public static final int btnYoutube=0x7f05007b;
+        public static final int btn_Perfil=0x7f050067;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int container=0x7f05003d;
+        public static final int container=0x7f05003e;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
-        public static final int drawer_layout=0x7f05003c;
+        public static final int drawer_layout=0x7f05003d;
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int fragment1=0x7f05003e;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
-        public static final int img_Banner=0x7f050046;
-        public static final int imgsplash1=0x7f050041;
-        public static final int imgsplash2=0x7f050042;
-        public static final int imgsplash3=0x7f050043;
-        public static final int imgsplash4=0x7f050044;
-        public static final int item_nombre=0x7f050049;
-        public static final int layout_Banner=0x7f050045;
-        public static final int listDistritos=0x7f050048;
+        public static final int imgFotoDiputadoPerfil=0x7f050070;
+        public static final int imgFotoLista=0x7f050064;
+        public static final int imgFotoNoticia=0x7f05006a;
+        public static final int imgInicioComisiones=0x7f050061;
+        public static final int imgInicioContacto=0x7f050063;
+        public static final int imgInicioDiputados=0x7f050060;
+        public static final int imgInicioTuVoz=0x7f050062;
+        public static final int imgLinea=0x7f050073;
+        public static final int imgLogoRedCiudadana=0x7f05007f;
+        public static final int imgsplash1=0x7f050044;
+        public static final int imgsplash2=0x7f050045;
+        public static final int imgsplash3=0x7f050046;
+        public static final int imgsplash4=0x7f050047;
+        public static final int item_nombre=0x7f050068;
+        public static final int listComisiones=0x7f05004f;
+        public static final int listDiputadosDistrito=0x7f05005e;
+        public static final int listDistritos=0x7f05005f;
+        public static final int listMiembrosComision=0x7f05005c;
         public static final int listMode=0x7f050001;
+        public static final int listNoticias=0x7f05006f;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
-        public static final int navigation_drawer=0x7f05003f;
+        public static final int navigation_drawer=0x7f050042;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int opcion=0x7f05004a;
+        public static final int opcion=0x7f050069;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
@@ -1156,13 +1211,40 @@ containing a value of this type.
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int splash_screen=0x7f050040;
+        public static final int splash_screen=0x7f050043;
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f050047;
+        public static final int textView1=0x7f05003c;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
+        public static final int txtComentario=0x7f050052;
+        public static final int txtCorreo=0x7f050051;
+        public static final int txtDescripcionComision=0x7f050056;
+        public static final int txtDescripcionNoticia=0x7f05006c;
+        public static final int txtDiputadosDistrito=0x7f05005d;
+        public static final int txtDireccionComision=0x7f050058;
+        public static final int txtDistritoDiputado=0x7f050072;
+        public static final int txtFechaNoticia=0x7f05006b;
+        public static final int txtLinkNoticia=0x7f05006e;
+        public static final int txtMiembroComisionTitulo=0x7f05005b;
+        public static final int txtNombre=0x7f050050;
+        public static final int txtNombreComision=0x7f050054;
+        public static final int txtNombreDiputado=0x7f050071;
+        public static final int txtNombreLista=0x7f050065;
+        public static final int txtPartidoDiputado=0x7f050074;
+        public static final int txtPerfil1=0x7f050075;
+        public static final int txtPerfil2=0x7f050076;
+        public static final int txtPregunta1=0x7f050081;
+        public static final int txtPregunta2=0x7f050082;
+        public static final int txtPregunta3=0x7f050083;
+        public static final int txtTelefonoComision=0x7f05005a;
+        public static final int txtTituloDescripcion=0x7f050055;
+        public static final int txtTituloDireccionComision=0x7f050057;
+        public static final int txtTituloNoticia=0x7f05006d;
+        public static final int txtTituloTelefonoComision=0x7f050059;
+        public static final int txtTuVoz=0x7f050080;
+        public static final int txtTwitterLista=0x7f050066;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1217,20 +1299,36 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_contenedor=0x7f030018;
-        public static final int activity_splash=0x7f030019;
-        public static final int banner_fragment=0x7f03001a;
-        public static final int comisiones_fragment=0x7f03001b;
-        public static final int contacto_fragment=0x7f03001c;
-        public static final int diputados_fragment=0x7f03001d;
-        public static final int foro_congreso_fragment=0x7f03001e;
-        public static final int fragment_contenedor=0x7f03001f;
-        public static final int fragment_navigation_drawer=0x7f030020;
-        public static final int item_lista=0x7f030021;
-        public static final int item_navigation_drawer=0x7f030022;
-        public static final int noticias_fragment=0x7f030023;
-        public static final int support_simple_spinner_dropdown_item=0x7f030024;
-        public static final int twitter_fragment=0x7f030025;
+        public static final int actividades_fragment=0x7f030018;
+        public static final int activity_contenedor=0x7f030019;
+        public static final int activity_splash=0x7f03001a;
+        public static final int banner1_fragment=0x7f03001b;
+        public static final int banner1_fragment_h=0x7f03001c;
+        public static final int banner2_fragment=0x7f03001d;
+        public static final int banner2_fragment_h=0x7f03001e;
+        public static final int banner3_fragment=0x7f03001f;
+        public static final int banner3_fragment_h=0x7f030020;
+        public static final int comisiones_fragment=0x7f030021;
+        public static final int contacto_fragment=0x7f030022;
+        public static final int detalle_comision_fragment=0x7f030023;
+        public static final int diputados_distrito_fragment=0x7f030024;
+        public static final int diputados_fragment=0x7f030025;
+        public static final int diputados_fragment_h=0x7f030026;
+        public static final int foro_congreso_fragment=0x7f030027;
+        public static final int fragment_contenedor=0x7f030028;
+        public static final int fragment_navigation_drawer=0x7f030029;
+        public static final int inicio_fagment_h=0x7f03002a;
+        public static final int inicio_fragment=0x7f03002b;
+        public static final int item_diputados=0x7f03002c;
+        public static final int item_lista=0x7f03002d;
+        public static final int item_navigation_drawer=0x7f03002e;
+        public static final int item_noticia=0x7f03002f;
+        public static final int noticias_fragment=0x7f030030;
+        public static final int perfil_diputado_fragment=0x7f030031;
+        public static final int red_ciudadana_fragment=0x7f030032;
+        public static final int support_simple_spinner_dropdown_item=0x7f030033;
+        public static final int tu_voz_fragment=0x7f030034;
+        public static final int twitter_fragment=0x7f030035;
     }
     public static final class menu {
         public static final int contenedor=0x7f0c0000;
@@ -1238,6 +1336,8 @@ containing a value of this type.
         public static final int splash=0x7f0c0002;
     }
     public static final class string {
+        public static final int Pregunta3=0x7f0a002e;
+        public static final int TuVoz=0x7f0a002b;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0a0001;
@@ -1278,46 +1378,71 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_example=0x7f0a0019;
+        public static final int action_example=0x7f0a001a;
         public static final int action_settings=0x7f0a000e;
+        public static final int actividadesfragment=0x7f0a002f;
         public static final int app_name=0x7f0a000d;
-        public static final int banner=0x7f0a001a;
+        public static final int banner=0x7f0a001b;
+        public static final int banner_bienvenido=0x7f0a0031;
+        public static final int banner_bienvenido2=0x7f0a0032;
+        public static final int banner_distrito=0x7f0a0033;
+        public static final int banner_distrito2=0x7f0a0034;
+        public static final int banner_representante=0x7f0a0035;
+        public static final int btnDescription=0x7f0a0020;
+        public static final int enviar=0x7f0a002a;
+        public static final int hint_comentario=0x7f0a001f;
+        public static final int hint_correo=0x7f0a001d;
+        public static final int hint_telefono=0x7f0a001e;
+        public static final int hint_txtnombre=0x7f0a001c;
         public static final int imgdesc=0x7f0a000f;
-        public static final int navigation_drawer_close=0x7f0a0018;
-        public static final int navigation_drawer_open=0x7f0a0017;
-        public static final int opcion1=0x7f0a0011;
-        public static final int opcion2=0x7f0a0012;
-        public static final int opcion3=0x7f0a0013;
-        public static final int opcion4=0x7f0a0014;
-        public static final int opcion5=0x7f0a0015;
-        public static final int opcion6=0x7f0a0016;
+        public static final int navigation_drawer_close=0x7f0a0019;
+        public static final int navigation_drawer_open=0x7f0a0018;
+        public static final int opcion0=0x7f0a0011;
+        public static final int opcion1=0x7f0a0012;
+        public static final int opcion2=0x7f0a0013;
+        public static final int opcion3=0x7f0a0014;
+        public static final int opcion4=0x7f0a0015;
+        public static final int opcion5=0x7f0a0016;
+        public static final int opcion6=0x7f0a0017;
+        public static final int pregunta1=0x7f0a002c;
+        public static final int pregunta2=0x7f0a002d;
+        public static final int red_ciudadana=0x7f0a0030;
         public static final int title_activity_contenedor=0x7f0a0010;
+        public static final int txtDirComisionTitulo=0x7f0a0026;
+        public static final int txtLinkNoticia=0x7f0a0024;
+        public static final int txtMiembrosTitulo=0x7f0a0028;
+        public static final int txtTelComisionTitulo=0x7f0a0027;
+        public static final int txtTituloComision=0x7f0a0025;
+        public static final int txtperfil1=0x7f0a0022;
+        public static final int txtperfil2=0x7f0a0023;
+        public static final int txtperfilAsistencia=0x7f0a0039;
+        public static final int txtperfilComision=0x7f0a0038;
+        public static final int txtperfilCorreo=0x7f0a0036;
+        public static final int txtperfilVoto=0x7f0a0037;
+        public static final int vacio=0x7f0a0021;
+        public static final int ver_perfil=0x7f0a0029;
     }
     public static final class style {
+        /**  Estilo ActionBar 
+         */
+        public static final int ActionBar=0x7f0b0090;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     
-
-            Theme customizations available in newer API levels can go in
+Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
+            backward-compatibility can go here. 
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
+ Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
+        res/values-v11/styles.xml on API 14+ devices. 
          */
         public static final int AppBaseTheme=0x7f0b008b;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
         /**  Mimic text appearance in select_dialog_item.xml 
@@ -1428,6 +1553,7 @@ containing a value of this type.
         /**  Base platform-dependent theme providing a light-themed activity. 
          */
         public static final int Theme_Base_Light=0x7f0b007f;
+        public static final int Theme_MyAppTheme_ActionBar_TitleTextStyle=0x7f0b0091;
         /**  Styles in here can be extended for customisation in your application. Each utilises
          one of the Base styles. If Holo themes are available on the current platform version
          they will be used instead of the compat styles. 
@@ -1522,6 +1648,9 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b000a;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0009;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0022;
+        /**  Estilo ActionBar 
+         */
+        public static final int WindowTitleBackground=0x7f0b008f;
         /**  Estilo para ListView 1 
          */
         public static final int estilo_listview_1=0x7f0b008e;

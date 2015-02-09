@@ -2,7 +2,6 @@ package com.redciudadana.congreso_abierto;
 
 import java.util.ArrayList;
 import android.app.Activity;
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 
 public class ItemListaAdapter extends BaseAdapter
 {
+	public int layout;
 	protected Fragment Fragmento;
 	protected Activity Actividad;
 	protected ArrayList<ItemLista> items;
@@ -42,13 +42,13 @@ public class ItemListaAdapter extends BaseAdapter
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		
+	public View getView(int position, View convertView, ViewGroup parent) 
+	{		
 		View vi= convertView;
 	    
 		if(convertView == null) 
 	    {	        
-	        LayoutInflater inflater = (LayoutInflater) Fragmento.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	        LayoutInflater inflater = (LayoutInflater) Fragmento.getActivity().getLayoutInflater();
 	        vi = inflater.inflate(R.layout.item_lista, null);
 	    }
 		

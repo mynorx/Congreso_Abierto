@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/banner_v"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/banner2Texto1"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/banner_distrito"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    
+    <ImageView
+        android:id="@+id/banner2Imagen1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/mapa"
+        android:contentDescription="@string/vacio"/>
+
+    <TextView
+        android:id="@+id/banner2Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner2Texto1"
+        android:text="@string/banner_distrito2"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

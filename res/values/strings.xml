@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+
+<resources >
 
     <string name="app_name">Congreso Abierto</string>
     <string name="action_settings">Settings</string>
     <string name="imgdesc">Congreso Abierto</string>
     <string name="title_activity_contenedor">ContenedorActivity</string>
-    <string name="opcion1">Noticias</string>
-    <string name="opcion2">Diputados</string>
-    <string name="opcion3">Comisiones</string>
-    <string name="opcion4">Foro del congreso</string>
-    <string name="opcion5">Twitter Feed</string>
+    <string name="opcion0">Inicio</string>
+    <string name="opcion1">¿Quién es mi representante?</string>
+    <string name="opcion2">Comisiones</string>
+    <string name="opcion3">Tu voz cuenta</string>
+    <string name="opcion4">Actividades</string>
+    <string name="opcion5">Red Ciudadana</string>
     <string name="opcion6">Contáctanos</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="banner">¿Quíen es mi representante?</string>
+    <string name="hint_txtnombre">Nombre Completo</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_comentario">Comentario</string>
+    <string name="btnDescription">Congreso Abierto</string>
+    <string name="vacio"></string>
+    <string name="txtperfil1">Involúcrate hoy.</string>
+    <string name="txtperfil2">Sigue a tu diputado ></string>
+    <string name="txtLinkNoticia">seguir leyendo</string>
+    <string name="txtTituloComision">Descripción</string>
+    <string name="txtDirComisionTitulo">Dirección:</string>
+    <string name="txtTelComisionTitulo">Teléfono:</string>
+    <string name="txtMiembrosTitulo">Miembros</string>
+    <string name="ver_perfil">Ver perfil</string>
+    <string name="enviar">Enviar</string>
+    <string name="TuVoz">Tu voz cuenta</string>
+    <string name="pregunta1">¿Qué no conoces del congreso y te gustaría conocer?</string>
+    <string name="pregunta2">¿Qué no te gusta del congreso?</string>
+    <string name="Pregunta3">¿Qué propones para mejorar lo que no te gusta del congreso?</string>
+    <string name="actividadesfragment">Próximamente</string>
+    <string name="red_ciudadana">Red Ciudadana es una organización sin fines de lucro, que tiene como objetivo fomentar la participación ciudadana y desarrollar soluciones a los problemas comunes de los ciudadanos por medio de la tecnología.</string>
+    <string name="banner_bienvenido">¡Bienvenido a Congreso Abierto!</string>
+    <string name="banner_bienvenido2">Aquí encontraras toda la información sobre el congreso</string>
+    <string name="banner_distrito">¿En qué distrito te encuentras empadronado?</string>
+    <string name="banner_distrito2">Elige tu distrito</string>
+    <string name="banner_representante">¿Quién es mi representante?</string>
+    <string name="txtperfilCorreo">Correo</string>
+    <string name="txtperfilVoto">Votos</string>
+    <string name="txtperfilComision">Comisión</string>
+    <string name="txtperfilAsistencia">Asistencia</string>
 
 </resources>
