@@ -10,9 +10,12 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -24,6 +27,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ItemDiputadosAdapter extends BaseAdapter
 {
@@ -72,7 +76,7 @@ public class ItemDiputadosAdapter extends BaseAdapter
 	    final ItemDiputados item = items.get(position);
 	    TextView nombre = (TextView) vi.findViewById(R.id.txtNombreLista);
 	    TextView partido_actual = (TextView) vi.findViewById(R.id.txtTwitterLista);
-	    Button btn_perfil = (Button) vi.findViewById(R.id.btn_Perfil);
+	    final Button btn_perfil = (Button) vi.findViewById(R.id.btn_Perfil);
 	    //imagenLista = (ImageView) vi.findViewById(R.id.imgFotoLista);
 	    
 	    nombre.setText(item.getNombre());
@@ -101,14 +105,24 @@ public class ItemDiputadosAdapter extends BaseAdapter
 			@Override
 			public void onClick(View v) 
 			{
-				//Aquí se crea procedimiento para llamar al fragment de diputados al hacer clic
-				FragmentManager fragmentManager = Fragmento.getActivity().getSupportFragmentManager();
+				//Se revisa la conexión de internet
+				ConnectivityManager cm = (ConnectivityManager)Fragmento.getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+				 
+				NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+				boolean isConnected = activeNetwork != null &&
+				                      activeNetwork.isConnectedOrConnecting();
 				
-				PerfilDiputadoFragment.codigo= item.getId();
-				
-				//Aquí se modifica el numero al textview dependiendo de su posicion
-				Fragment fragment = new PerfilDiputadoFragment();
-				fragmentManager.beginTransaction().replace(R.id.container,fragment).commit();
+				if (isConnected){
+					
+					//Aquí se crea procedimiento para llamar al fragment de diputados al hacer clic
+					FragmentManager fragmentManager = Fragmento.getActivity().getSupportFragmentManager();
+					PerfilDiputadoFragment.codigo= item.getId();
+					//Aquí se modifica el numero al textview dependiendo de su posicion
+					Fragment fragment = new PerfilDiputadoFragment();
+					fragmentManager.beginTransaction().replace(R.id.container,fragment).commit();
+
+				}
+				else Toast.makeText(Fragmento.getActivity(), "Necesita conexión a internet para continuar",Toast.LENGTH_SHORT).show();
 			}
 	    	
 	    });

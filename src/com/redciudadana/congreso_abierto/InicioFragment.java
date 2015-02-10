@@ -36,6 +36,7 @@ public class InicioFragment extends Fragment {
 		ft.hide(miBanner2);
 		ft.hide(miBanner3);
 		ft.commit();
+		
 		//Detectamos el estado de la rotacion
 		WindowManager wm = getActivity().getWindowManager();
 		Display d = wm.getDefaultDisplay();

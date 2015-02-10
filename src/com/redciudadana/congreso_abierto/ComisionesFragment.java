@@ -8,16 +8,22 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -47,7 +53,17 @@ public class ComisionesFragment extends Fragment {
 		ft.hide(miBanner2);
 		ft.hide(miBanner3);
 		ft.commit();
+		
 		fragment = inflater.inflate(R.layout.comisiones_fragment, container, false);
+		
+		//Detectamos el estado de la rotacion
+		WindowManager wm = getActivity().getWindowManager();
+		Display d = wm.getDefaultDisplay();
+						
+		if ((d.getRotation() == Surface.ROTATION_90) || (d.getRotation() == Surface.ROTATION_270))
+		{fragment = inflater.inflate(R.layout.comisiones_fragment_h, container, false);}
+		
+		
 		if(frag == false)ContenedorActivity.regreso = 1;
 		else
 		{
@@ -81,8 +97,7 @@ public class ComisionesFragment extends Fragment {
 			@Override
 			protected ArrayList<ItemLista> doInBackground(String... params) 
 			{	
-				// TODO Auto-generated method stub
-				
+				// TODO Auto-generated method stub		
 				// Creamos nuevo cliente Http
 				DefaultHttpClient defaultClient = new DefaultHttpClient();
 				String URL = "http://54.186.114.101:3000/listado_comisiones.json";
@@ -96,8 +111,7 @@ public class ComisionesFragment extends Fragment {
 				// Hacemos el llamado al metodo get y damos la url JSON
 				 HttpGet httpGetRequest = new HttpGet(URL);
 				 
-				 try{
-				
+				 try{				 
 					httpGetRequest.setHeader("content-type", "application/json");
 					    						
 					//Hacemos la ejecución para obtener los datos JSON
@@ -121,6 +135,7 @@ public class ComisionesFragment extends Fragment {
 					}
 					
 					return items;
+					
 				}
 					    
 				catch(Exception e){
@@ -140,7 +155,7 @@ public class ComisionesFragment extends Fragment {
 			
 			@Override
 	        protected void onPreExecute() 
-			{
+			{				
 				pDialog.setOnCancelListener(new OnCancelListener() {
 		            
 		            public void onCancel(DialogInterface dialog) {
@@ -169,19 +184,40 @@ public class ComisionesFragment extends Fragment {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 					{
-						//Aquí obtenemos el distrito que seleccionamos
-						ItemLista elegido = (ItemLista) parent.getItemAtPosition(position);
-						long codigo = elegido.getId();
+						ConnectivityManager cm = (ConnectivityManager)getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+						 
+						NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+						boolean isConnected = activeNetwork != null &&
+						                      activeNetwork.isConnectedOrConnecting();
 						
-						//Aquí se crea procedimiento para llamar al fragment de diputados al hacer clic
-						DetalleComisionFragment.codigo =codigo;
-										
-						FragmentManager fragmentManager = getFragmentManager();
-						Fragment fragmento = new DetalleComisionFragment();
-						fragmentManager.beginTransaction().replace(R.id.container,fragmento).commit();					
+						if (isConnected){						
+							//Aquí obtenemos el distrito que seleccionamos
+							ItemLista elegido = (ItemLista) parent.getItemAtPosition(position);
+							long codigo = elegido.getId();
+							
+							//Aquí se crea procedimiento para llamar al fragment de diputados al hacer clic
+							DetalleComisionFragment.codigo =codigo;
+											
+							FragmentManager fragmentManager = getFragmentManager();
+							Fragment fragmento = new DetalleComisionFragment();
+							fragmentManager.beginTransaction().replace(R.id.container,fragmento).commit();	
+						}
+						else Toast.makeText(getActivity(), "Necesita conexión a internet para continuar",Toast.LENGTH_SHORT).show();
 					}
 				});
 				
+				//Se revisa la conexión de internet
+				ConnectivityManager cm = (ConnectivityManager)getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+				 
+				NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+				boolean isConnected = activeNetwork != null &&
+				                      activeNetwork.isConnectedOrConnecting();
+				
+				if (isConnected == false)
+				{
+					lv.setVisibility(View.INVISIBLE);
+					Toast.makeText(getActivity(), "Necesita conexión a internet para continuar",Toast.LENGTH_SHORT).show();
+				}
 		    }
 			
 			@Override

@@ -15,10 +15,13 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -137,30 +140,58 @@ public class PerfilDiputadoFragment extends Fragment
 			//String twitter_cuenta = "";
 			//String facebook = "";
 			
-			//Obtenemos los parametros String
-			for(int i=0;i<result.length();i++)
-			{
-				//Creamos un objeto JSON para almacenar cada item
-				JSONObject objeto;
-				try 
+			Button llamar = (Button) fragment.findViewById(R.id.btnLlamarDiputado);
+			Button correo = (Button) fragment.findViewById(R.id.btnCorreoDiputado);
+			Button comisiones = (Button) fragment.findViewById(R.id.btnComisionesDiputado);
+			Button asistencia = (Button) fragment.findViewById(R.id.btnAsistanciaDiputado);
+			
+			////Se revisa la conexión de internet
+			ConnectivityManager cm = (ConnectivityManager)getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+			 
+			NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+			boolean isConnected = activeNetwork != null &&
+			                      activeNetwork.isConnectedOrConnecting();
+			
+			if (isConnected)
+			{				
+				//Obtenemos los parametros String
+				for(int i=0;i<result.length();i++)
 				{
-					objeto = result.getJSONObject(i);
-					id = Long.toString(objeto.getLong("id")); 
-					nombre = objeto.getString("nombre");
-					distrito = objeto.getString("distrito");
-					partido = objeto.getString("partido_actual");
-					telefono = objeto.getString("telefono");
-					correo_diputado = objeto.getString("correo");
-					asistencia_diputado = objeto.getInt("asistencia");
-					url_foto = objeto.getString("url_foto");
-					//twitter_cuenta = objeto.getString("twitter");
-					//facebook = objeto.getString("facebook");					
-				}
-				catch (JSONException e) 
-				{
-					e.printStackTrace();
+					//Creamos un objeto JSON para almacenar cada item
+					JSONObject objeto;
+					try 
+					{
+						
+						objeto = result.getJSONObject(i);
+						id = Long.toString(objeto.getLong("id")); 
+						nombre = objeto.getString("nombre");
+						distrito = objeto.getString("distrito");
+						partido = objeto.getString("partido_actual");
+						telefono = objeto.getString("telefono");
+						correo_diputado = objeto.getString("correo");
+						asistencia_diputado = objeto.getInt("asistencia");
+						url_foto = objeto.getString("url_foto");
+						//twitter_cuenta = objeto.getString("twitter");
+						//facebook = objeto.getString("facebook");		
+						
+					}
+					catch (JSONException e) 
+					{
+						e.printStackTrace();
+					}
 				}
 			}
+			else{
+
+				llamar.setEnabled(false);
+				correo.setEnabled(false);
+				comisiones.setEnabled(false);
+				asistencia.setEnabled(false);
+				Toast.makeText(getActivity(), "Necesita conexión a internet para ver la información",Toast.LENGTH_SHORT).show();
+			}
+			
+			
+			
 			//Enviamos los parametros al layout			
 			TextView txtNombre = (TextView) fragment.findViewById(R.id.txtNombreDiputado);
 			txtNombre.setText(nombre);
@@ -170,7 +201,7 @@ public class PerfilDiputadoFragment extends Fragment
 			TextView txtPartido = (TextView) fragment.findViewById(R.id.txtPartidoDiputado);
 			txtPartido.setText(partido);
 			
-			Button llamar = (Button) fragment.findViewById(R.id.btnLlamarDiputado);
+			
 			llamar.setOnClickListener(new OnClickListener()
 			{
 				@Override
@@ -178,7 +209,7 @@ public class PerfilDiputadoFragment extends Fragment
 				startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+telefono)));						
 			}});
 				
-			Button correo = (Button) fragment.findViewById(R.id.btnCorreoDiputado);
+			
 			correo.setOnClickListener(new OnClickListener()
 			{
 				@Override
@@ -187,7 +218,7 @@ public class PerfilDiputadoFragment extends Fragment
 					enviar(correo_diputado);
 				}});
 	
-			Button comisiones = (Button) fragment.findViewById(R.id.btnComisionesDiputado);
+			
 			comisiones.setOnClickListener(new OnClickListener()
 			{
 				@Override
@@ -203,7 +234,7 @@ public class PerfilDiputadoFragment extends Fragment
 				fragmentManager.beginTransaction().replace(R.id.container,fragment).commit();
 			}});
 				
-			Button asistencia = (Button) fragment.findViewById(R.id.btnAsistanciaDiputado);
+			
 			asistencia.setOnClickListener(new OnClickListener()
 			{
 				@Override

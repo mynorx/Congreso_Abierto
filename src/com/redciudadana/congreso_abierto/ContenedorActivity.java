@@ -83,10 +83,7 @@ public class ContenedorActivity extends ActionBarActivity implements NavigationD
 		mTitle = getTitle();
 		
 		//Se llama a la funcion setUp para la configuración del NavigationDrawer
-		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
-		
-		
-		
+		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));		
 		
 				
 	}//Fin de funcion onCreate de la Actividad Contenedor 

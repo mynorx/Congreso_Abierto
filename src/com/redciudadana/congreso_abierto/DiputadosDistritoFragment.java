@@ -8,8 +8,11 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -160,7 +163,20 @@ public class DiputadosDistritoFragment extends Fragment
 			lv = (ListView)fragment.findViewById(R.id.listDiputadosDistrito);
 			ArrayList<ItemDiputados> itemsDiputados = result;					     
 			ItemDiputadosAdapter adapter = new ItemDiputadosAdapter(DiputadosDistritoFragment.this, itemsDiputados);				   
-			lv.setAdapter(adapter);			
+			lv.setAdapter(adapter);
+			
+			//Se revisa la conexión de internet
+			ConnectivityManager cm = (ConnectivityManager)getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+			 
+			NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+			boolean isConnected = activeNetwork != null &&
+			                      activeNetwork.isConnectedOrConnecting();
+			
+			if (isConnected == false)
+			{
+				lv.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity(), "Necesita conexión a internet para continuar",Toast.LENGTH_SHORT).show();
+			}
 		}
 			
 		@Override
